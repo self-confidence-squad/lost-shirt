@@ -115,13 +115,13 @@ ul > li {
     transition-delay: .1s;
 }
 
-.sidebar__humburger-icon {
+.sidebar__hamburger-icon {
     width: 29px;
     height: 29px;
     fill: var(--yellow);
 }
 
-.sidebar__humburger {
+.sidebar__hamburger {
     display: block;
     position: absolute;
     top: 27px;
@@ -134,7 +134,7 @@ ul > li {
     padding: 0 3% 0 4%;
 }
 
-.sidebar--opened .sidebar__humburger {
+.sidebar--opened .sidebar__hamburger {
     display: none;
 }
 

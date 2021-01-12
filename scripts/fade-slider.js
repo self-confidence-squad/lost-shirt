@@ -1,5 +1,5 @@
 // функция и скобки в ней нужны для того что бы скрыть код от вызова других функций
-(function() {
+
 
     const slides = document.querySelectorAll('.fade-slider__item');
     const activeClass = "fade-slider__item--visble";
@@ -17,4 +17,3 @@
       
     }, 4000);
   
-  }())
