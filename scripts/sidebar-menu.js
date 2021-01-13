@@ -1,14 +1,21 @@
-// функция и скобки в ней нужны для того что бы скрыть код от вызова других функций
+
+// sidebar menu
 (function() {
-  const openingBtn = document.querySelector(".sidebar__hamburger");
+  const openingBtn = document.querySelector(".sidebar__bars");
   const closingBtn = document.querySelector(".sidebar__close");
   const sidebar = document.querySelector(".sidebar");
 
-  openingBtn.addEventListener("click", function() {
+  openingBtn.addEventListener("click", e => {
     sidebar.classList.add("sidebar--opened");
   });
 
-  closingBtn.addEventListener("click", function() {
+  closingBtn.addEventListener("click", e => {
     sidebar.classList.remove("sidebar--opened");
   });
-})()
+
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".sidebar")) {
+      sidebar.classList.remove("sidebar--opened");
+    }
+  });
+})();

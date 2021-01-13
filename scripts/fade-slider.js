@@ -1,19 +1,19 @@
-// функция и скобки в ней нужны для того что бы скрыть код от вызова других функций
+(function() {
+  const slides = document.querySelectorAll(".fade-slider__item");
+  const activeClass = "fade-slider__item--visible";
+  let index = 0;
 
+  setInterval(() => {
+    slides[index].classList.remove(activeClass);
 
-    const slides = document.querySelectorAll('.fade-slider__item');
-    const activeClass = "fade-slider__item--visble";
-    let index = 0;
-  
-    setInterval(function() {
-      slides[index].classList.remove(activeClass);
-      index++;
-  
-      if (index + 1 > slides.length) {
-        index = 0;
-      }
-  
-      slides[index].classList.add(activeClass);
-      
-    }, 4000);
-  
+    index++;
+
+    if (index + 1 > slides.length) {
+      index = 0;
+    }
+
+    slides[index].classList.add(activeClass);
+  }, 5000);
+
+  console.log(slides);
+})();
